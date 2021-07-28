@@ -7,7 +7,6 @@ exports.createPost = (req, res, next) => {
     htmlContent: req.body.htmlContent,
     userId: req.body.userId
   });
-  console.log('post : ', post)
   post.save().then(
     () => {
       res.status(201).json({
